@@ -53,13 +53,19 @@ angular.module('wordBaseHack', [])
     var WIDTH = that.puzzle[0].length;
     var HEIGHT = that.puzzle.length;
 
+    for (var i = 0; i < HEIGHT; i++) {
+        that.puzzle[i] = that.puzzle[i].split('');
+        for (var j = 0; j < WIDTH; j++) {
+            that.puzzle[i][j] = {
+                letter: that.puzzle[i][j],
+                highlighted: false
+            }
+        }  
+    }
+
     function init (dictionary, formableWords) {
         that.dictionary = dictionary;
         that.formableWords = formableWords
-
-        for (var i = 0; i < that.puzzle.length; i++) {
-            that.puzzle[i] = that.puzzle[i].split('');
-        }
         console.log('READY!');
     }
 
@@ -71,7 +77,23 @@ angular.module('wordBaseHack', [])
         }).join('');
     };
 
+    function resetHighlighting () {
+        for (var i = 0; i < HEIGHT; i++) {
+            for (var j = 0; j < WIDTH; j++) {
+                that.puzzle[i][j].highlighted = false;
+            }  
+        }
+    }
+
+    that.highlightLetters = function (sequence) {
+        resetHighlighting();
+        sequence.forEach(function (item) {
+            that.puzzle[item.row][item.col].highlighted = true;
+        });
+    }
+
     that.findWordsFromCell = function (i, j) {
+        resetHighlighting();
         var words = [];
         var count = 0;
         function traverse(currPuzzle, currSeq, i, j) {
@@ -85,11 +107,11 @@ angular.module('wordBaseHack', [])
                 return;
             }
             currSeq.push({
-                letter: currPuzzle[i][j],
+                letter: currPuzzle[i][j].letter,
                 row: i,
                 col: j
             });
-            currPuzzle[i][j] = '*';
+            currPuzzle[i][j].letter = '*';
             var puzzle = _.cloneDeep(currPuzzle);
             var currentWord = that.getWordFromSequence(currSeq);
             if (that.dictionary[currentWord]) {
@@ -113,6 +135,7 @@ angular.module('wordBaseHack', [])
         words.sort(function (a, b) {
             return b.length - a.length;
         });
+
         console.log('DONE', count, words);
         that.words = words;
     }
