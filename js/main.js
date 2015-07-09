@@ -114,12 +114,19 @@ angular.module('wordBaseHack', [])
     that.computeProgress = function (word) {
         var startRow = word[0].row;
         var maxDistance = 0;
+        var minDistance = 0;
         word.forEach(function (obj) {
-            var difference = that.startFromBottom ? (startRow - obj.row) : (obj.row - startRow);
-            var distance = Math.max(difference, 0);
-            maxDistance = Math.max(maxDistance, distance);
+            var difference = startRow - obj.row;
+            var differenceA = Math.max(difference, 0);
+            if (differenceA > maxDistance) {
+                maxDistance = differenceA;
+            }
+            var differenceB = Math.min(difference, 0);
+            if (differenceB < minDistance) {
+                minDistance = differenceB;
+            }
         });
-        return maxDistance;
+        return Math.abs(that.startFromBottom ? maxDistance : minDistance);
     }
 
     $(function () {
