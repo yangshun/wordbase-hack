@@ -6,50 +6,22 @@ angular.module('wordBaseHack', [])
     var that = this;
     
     that.puzzle = [
-        'AHULTEMIDG',
-        'NELMERFOAR',
-        'ZIOJHFDMLP',
-        'IMNAUENISD',
-        'LADGMALUIE',
-        'TSLERSDANZ',
-        'OHDYETKESO',
-        'ENSLIMOTLI',
-        'DIERMLSETA',
-        'CODNUIVYRT',
-        'EHOTERALUA',
-        'ICMRTSTEON',
-        'VITDELNADC'];
-
-    // that.puzzle = [
-    //     'HPALBNQRAB',
-    //     'ABLUWBUHEO',
-    //     'TIRAEOSESW',
-    //     'GOTRVTOHEH',
-    //     'NYIPERGIRB',
-    //     'LIGNTGNLOS',
-    //     'FRSEOIAIPE',
-    //     'TAGXRSTCSR',
-    //     'NDSNTHYSIE',
-    //     'EAHIPTGAWT',
-    //     'INKYANETES',
-    //     'OCNTEMUMRA',
-    //     'DIGILNAPLP'];
-
-    // that.puzzle = [
-    //     'HYCSTVAIUG',
-    //     'CSANEIRALR',
-    //     'TOSGLRWSES',
-    //     'ACPIMOSXAC',
-    //     'NURACTEOHA',
-    //     'TDONBARCRS',
-    //     'OINEXSCSQL',
-    //     'NLIRNISAUE',
-    //     'IDENTAEDNS',
-    //     'EFUDSRVLIG',
-    //     'WSKEGNUGOV',
-    //     'LOGOVEIVAO',
-    //     'ALDCRSETPS'];
+        'HYCSTVAIUG',
+        'CSANEIRALR',
+        'TOSGLRWSES',
+        'ACPIMOSXAC',
+        'NURACTEOHA',
+        'TDONBARCRS',
+        'OINEXSCSQL',
+        'NLIRNISAUE',
+        'IDENTAEDNS',
+        'EFUDSRVLIG',
+        'WSKEGNUGOV',
+        'LOGOVEIVAO',
+        'ALDCRSETPS'];
     
+    that.startFromBottom = true;
+
     var WIDTH = that.puzzle[0].length;
     var HEIGHT = that.puzzle.length;
 
@@ -136,8 +108,18 @@ angular.module('wordBaseHack', [])
             return b.length - a.length;
         });
 
-        console.log('DONE', count, words);
         that.words = words;
+    }
+
+    that.computeProgress = function (word) {
+        var startRow = word[0].row;
+        var maxDistance = 0;
+        word.forEach(function (obj) {
+            var difference = that.startFromBottom ? (startRow - obj.row) : (obj.row - startRow);
+            var distance = Math.max(difference, 0);
+            maxDistance = Math.max(maxDistance, distance);
+        });
+        return maxDistance;
     }
 
     $(function () {

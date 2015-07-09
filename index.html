@@ -27,7 +27,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <table>
+                    <h2>Puzzle</h2>
+                    <table class="grid">
                         <tr ng-repeat="row in wb.puzzle track by $index"
                             ng-init="$rowIndex = $index">
                             <td ng-repeat="cell in row track by $index" ng-click="wb.findWordsFromCell($rowIndex, $index)" class="{{{true: 'highlighted'}[cell.highlighted]}}">{{cell.letter}}</td>
@@ -36,11 +37,23 @@
                 </div>
                 <div class="col-md-6">
                     <h2>Words</h2>
-                    <ul>
-                        <li ng-repeat="seq in wb.words track by $index" ng-click="wb.highlightLetters(seq)">
-                            <a>{{wb.getWordFromSequence(seq)}}</a>
-                        </li>
-                    </ul>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="startFromBottom"> Bottom Player
+                        </label>
+                    </div>
+                    <table class="words">
+                        <tr>
+                            <th>Word</th>
+                            <th>Length</th>
+                            <th>Progress</th>
+                        </tr>
+                        <tr ng-repeat="seq in wb.words track by $index" ng-click="wb.highlightLetters(seq)">
+                            <td>{{wb.getWordFromSequence(seq)}}</td>
+                            <td>{{wb.getWordFromSequence(seq).length}}</td>
+                            <td>{{wb.computeProgress(seq)}}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

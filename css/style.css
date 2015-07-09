@@ -1,22 +1,32 @@
-table {
-    margin: 40px auto;
-}
-td {
-    border: 1px solid #000;
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    cursor: pointer;
+.grid {
+  margin: 40px;
 }
 
-td.highlighted {
+.grid td {
+  border: 1px solid #000;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid td.highlighted {
   background-color: #aaa;
 }
-td:hover {
-    font-weight: bold;
+.grid td:hover {
+  font-weight: bold;
 }
-a {
+
+.words tr {
   cursor: pointer;
+}
+.words tr:hover {
+  background-color: #aaa;
+}
+.words td, 
+.words th {
+  border: 1px solid #666;
+  padding: 5px;
 }
