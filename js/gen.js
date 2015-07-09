@@ -8,7 +8,7 @@ fs.readFile('../data/Word-List.txt', 'utf8', function (err, data) {
     return word.replace('\r', '');
   });
   var outputFilename = '../data/words.json';
-  fs.writeFile(outputFilename, JSON.stringify(words, null, 4), function(err) {
+  fs.writeFile(outputFilename, JSON.stringify(words), function(err) {
     if(err) {
       console.log(err);
     } else {
