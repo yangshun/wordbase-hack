@@ -2,25 +2,53 @@ var fn = null;
 
 angular.module('wordBaseHack', [])
     .controller('wordBaseController', function () {
-    
+
     var that = this;
-    
+
     that.puzzle = [
-        'HYCSTVAIUG',
-        'CSANEIRALR',
-        'TOSGLRWSES',
-        'ACPIMOSXAC',
-        'NURACTEOHA',
-        'TDONBARCRS',
-        'OINEXSCSQL',
-        'NLIRNISAUE',
-        'IDENTAEDNS',
-        'EFUDSRVLIG',
-        'WSKEGNUGOV',
-        'LOGOVEIVAO',
-        'ALDCRSETPS'];
-    
-    that.startFromBottom = true;
+        'GRDTYELDRW',
+        'SAINTANOAN',
+        'NMSEMIUXGA',
+        'BLJVDBTAIT',
+        'IEOISEAHSO',
+        'STVADNSLDS',
+        'KOSNOTEDCE',
+        'MIHRCFASER',
+        'ARKINESTON',
+        'DLESFLRCGS',
+        'AIMRIHNDIR',
+        'TRLTSIFSOC',
+        'DECYTEHLAM'];
+
+        // 'AHULTEMIDG',
+        // 'NELMERFOAR',
+        // 'ZIOJHFDMLP',
+        // 'IMNAUENISD',
+        // 'LADGMALUIE',
+        // 'TSLERSDANZ',
+        // 'OHDYETKESO',
+        // 'ENSLIMOTLI',
+        // 'DIERMLSETA',
+        // 'CODNUIVYRT',
+        // 'EHOTERALUA',
+        // 'ICMRTSTEON',
+        // 'VITDELNADC'];
+
+        // 'HYCSTVAIUG',
+        // 'CSANEIRALR',
+        // 'TOSGLRWSES',
+        // 'ACPIMOSXAC',
+        // 'NURACTEOHA',
+        // 'TDONBARCRS',
+        // 'OINEXSCSQL',
+        // 'NLIRNISAUE',
+        // 'IDENTAEDNS',
+        // 'EFUDSRVLIG',
+        // 'WSKEGNUGOV',
+        // 'LOGOVEIVAO',
+        // 'ALDCRSETPS'];
+
+    that.startFromBottom = false;
 
     var WIDTH = that.puzzle[0].length;
     var HEIGHT = that.puzzle.length;
@@ -32,7 +60,7 @@ angular.module('wordBaseHack', [])
                 letter: that.puzzle[i][j],
                 highlighted: false
             }
-        }  
+        }
     }
 
     function init (dictionary, formableWords) {
@@ -53,7 +81,7 @@ angular.module('wordBaseHack', [])
         for (var i = 0; i < HEIGHT; i++) {
             for (var j = 0; j < WIDTH; j++) {
                 that.puzzle[i][j].highlighted = false;
-            }  
+            }
         }
     }
 
@@ -70,8 +98,8 @@ angular.module('wordBaseHack', [])
         var count = 0;
         function traverse(currPuzzle, currSeq, i, j) {
             count++;
-            if (i < 0 || i >= HEIGHT || 
-                j < 0 || 
+            if (i < 0 || i >= HEIGHT ||
+                j < 0 ||
                 j >= WIDTH) {
                 return;
             }
