@@ -7,19 +7,19 @@ angular.module('wordBaseHack', [])
 
     that.puzzle = [
 
-        'HYCSTVAIUG',
-        'CSANEIRALR',
-        'TOSGLRWSES',
-        'ACPIMOSXAC',
-        'NURACTEOHA',
-        'TDONBARCRS',
-        'OINEXSCSQL',
-        'NLIRNISAUE',
-        'IDENTAEDNS',
-        'EFUDSRVLIG',
-        'WSKEGNUGOV',
-        'LOGOVEIVAO',
-        'ALDCRSETPS'];
+        'LAPNASTLDE',
+        'CETILOHUEM',
+        'NORSESRACS',
+        'SPTROWEHIT',
+        'KIUACNDLAO',
+        'DELEAGIBPL',
+        'IORYSWRPIS',
+        'AMTEMGELSL',
+        'DELPUYNSIP',
+        'TIPLHRTOYS',
+        'SRXNASIHSA',
+        'OEICTEDNGO',
+        'CSNHSGMTUG'];
 
         // 'CECTITAKSM',
         // 'LRAINOMRUO',
