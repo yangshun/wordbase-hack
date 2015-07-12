@@ -7,33 +7,33 @@ angular.module('wordBaseHack', [])
 
     that.puzzle = [
 
-        // 'AHULTEMIDG',
-        // 'NELMERFOAR',
-        // 'ZIOJHFDMLP',
-        // 'IMNAUENISD',
-        // 'LADGMALUIE',
-        // 'TSLERSDANZ',
-        // 'OHDYETKESO',
-        // 'ENSLIMOTLI',
-        // 'DIERMLSETA',
-        // 'CODNUIVYRT',
-        // 'EHOTERALUA',
-        // 'ICMRTSTEON',
-        // 'VITDELNADC'];
+        'HYCSTVAIUG',
+        'CSANEIRALR',
+        'TOSGLRWSES',
+        'ACPIMOSXAC',
+        'NURACTEOHA',
+        'TDONBARCRS',
+        'OINEXSCSQL',
+        'NLIRNISAUE',
+        'IDENTAEDNS',
+        'EFUDSRVLIG',
+        'WSKEGNUGOV',
+        'LOGOVEIVAO',
+        'ALDCRSETPS'];
 
-        'CECTITAKSM',
-        'LRAINOMRUO',
-        'ISLOFRLTRU',
-        'GRPNUWYIOL',
-        'DYECEDISEP',
-        'SEOEGLECOU',
-        'FLPNORAMSR',
-        'LFRMATNTEI',
-        'MIATEYANKA',
-        'USNEOBLEUL',
-        'LXROBPYRCU',
-        'HOCKAOUPIA',
-        'PADMNRETSC'];
+        // 'CECTITAKSM',
+        // 'LRAINOMRUO',
+        // 'ISLOFRLTRU',
+        // 'GRPNUWYIOL',
+        // 'DYECEDISEP',
+        // 'SEOEGLECOU',
+        // 'FLPNORAMSR',
+        // 'LFRMATNTEI',
+        // 'MIATEYANKA',
+        // 'USNEOBLEUL',
+        // 'LXROBPYRCU',
+        // 'HOCKAOUPIA',
+        // 'PADMNRETSC'];
 
     that.startFromBottom = false;
 
