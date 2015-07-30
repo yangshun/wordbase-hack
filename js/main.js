@@ -17,7 +17,7 @@ angular.module('wordBaseHack', [])
         'QKDRIVIDAI',
         'IENAHSNREM',
         'MSKBTYLEST',
-        'NUINISRMTG',
+        'NUINUSRMTG',
         'IATOSESUGR',
         'DCRBWDAILA'];
 
