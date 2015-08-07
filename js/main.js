@@ -7,19 +7,19 @@ angular.module('wordBaseHack', [])
 
     that.puzzle = [
 
-        'RITVILAGEM',
-        'EPNYDNLRNO',
-        'DMACIGCILT',
-        'SOROLAEDSR',
-        'VSGNMNDUOI',
-        'EAILITNSLW',
-        'RLNITSGIHE',
-        'IEGUPEUNTN',
-        'NGTIHAMRIH',
-        'YANSDGEDOS',
-        'KELERDAIEP',
-        'OYSIABMDTY',
-        'DULEDNEARG'];
+        'TGANTEWIOG',
+        'SERBRATDGE',
+        'ANMHDPLIND',
+        'UBTXAEOFKE',
+        'LEORLUYRIO',
+        'DOKBESNENT',
+        'RTSUTNACWK',
+        'GPENSIPMCE',
+        'IDAELSNAET',
+        'ERIHTURNZS',
+        'RYTCRETCLT',
+        'AOLAEISEAL',
+        'MPHKCEDHIW'];
 
     that.startFromBottom = false;
 
