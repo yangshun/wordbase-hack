@@ -5,21 +5,22 @@ angular.module('wordBaseHack', [])
 
     var that = this;
 
-    that.puzzle = [
+    // SERIALISTS missing
 
-        'TGANTEWIOG',
-        'SERBRATDGE',
-        'ANMHDPLIND',
-        'UBTXAEOFKE',
-        'LEORLUYRIO',
-        'DOKBESNENT',
-        'RTSUTNACWK',
-        'GPENSIPMCE',
-        'IDAELSNAET',
-        'ERIHTURNZS',
-        'RYTCRETCLT',
-        'AOLAEISEAL',
-        'MPHKCEDHIW'];
+    that.puzzle = [
+        'EXLSNWBING',
+        'KYCOHOMLOP',
+        'OETAPURULY',
+        'LHAIOTSGAE',
+        'SKCNTSDTRP',
+        'NINCEILETI',
+        'ANGIRDGSEL',
+        'GRSAHPNKLS',
+        'LSEPLAMITE',
+        'APTMOIKAPH',
+        'KEIRSCRETS',
+        'ICRATHKTIU',
+        'DSEMBSACON'];
 
     that.startFromBottom = false;
 
