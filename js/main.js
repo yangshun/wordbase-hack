@@ -94,14 +94,14 @@ angular.module('wordBaseHack', [])
             if (!that.formableWords[currentWord]) {
                 return;
             }
-            traverse(puzzle, _.cloneDeep(currSeq), i - 1, j - 1);
-            traverse(puzzle, _.cloneDeep(currSeq), i - 1, j);
-            traverse(puzzle, _.cloneDeep(currSeq), i - 1, j + 1);
-            traverse(puzzle, _.cloneDeep(currSeq), i, j - 1);
-            traverse(puzzle, _.cloneDeep(currSeq), i, j + 1);
-            traverse(puzzle, _.cloneDeep(currSeq), i + 1, j - 1);
-            traverse(puzzle, _.cloneDeep(currSeq), i + 1, j);
-            traverse(puzzle, _.cloneDeep(currSeq), i + 1, j + 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i - 1, j - 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i - 1, j);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i - 1, j + 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i, j - 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i, j + 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i + 1, j - 1);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i + 1, j);
+            traverse(_.cloneDeep(puzzle), _.cloneDeep(currSeq), i + 1, j + 1);
         }
 
         traverse(_.cloneDeep(that.puzzle), [], i, j);
