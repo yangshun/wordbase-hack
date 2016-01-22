@@ -107,7 +107,7 @@ angular.module('wordBaseHack', [])
         traverse(_.cloneDeep(that.puzzle), [], i, j);
 
         words.sort(function (a, b) {
-            return b.length - a.length;
+            return that.computeProgress(b) - that.computeProgress(a);
         });
 
         that.words = words;
