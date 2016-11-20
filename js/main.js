@@ -1,5 +1,7 @@
 var fn = null;
 
+const TRAVERSED_SYMBOL = '*';
+
 angular.module('wordBaseHack', [])
     .controller('wordBaseController', function () {
 
@@ -77,7 +79,7 @@ angular.module('wordBaseHack', [])
                 j >= WIDTH) {
                 return;
             }
-            if (currPuzzle[i][j] === '*') {
+            if (currPuzzle[i][j] === TRAVERSED_SYMBOL) {
                 return;
             }
             currSeq.push({
@@ -85,7 +87,7 @@ angular.module('wordBaseHack', [])
                 row: i,
                 col: j
             });
-            currPuzzle[i][j].letter = '*';
+            currPuzzle[i][j].letter = TRAVERSED_SYMBOL;
             var puzzle = _.cloneDeep(currPuzzle);
             var currentWord = that.getWordFromSequence(currSeq);
             if (that.dictionary[currentWord]) {
