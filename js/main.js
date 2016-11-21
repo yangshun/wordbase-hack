@@ -74,9 +74,7 @@ angular.module('wordBaseHack', [])
         var count = 0;
         function traverse(currPuzzle, currSeq, i, j) {
             count++;
-            if (i < 0 || i >= HEIGHT ||
-                j < 0 ||
-                j >= WIDTH) {
+            if (i < 0 || i >= HEIGHT || j < 0 || j >= WIDTH) {
                 return;
             }
             if (currPuzzle[i][j] === TRAVERSED_SYMBOL) {
